@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <title>V1</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <div id="container-imagem"></div>
+
+    <div id="box1" class="box1" style="display: block;" >
+        <div id="container-global-1">
+
+            <h1 id="title_register"> Bem Vindo(a)</h1>
+            <h3 id="sub_title_register"> Cadastre aqui</h3>
+
+            <div id="inputs">
+
+                <img id="icons" src="imagens/person.png">
+                <input type="text" id="name" class="name" placeholder="Nome" onfocus="validationnameFunction()" value=""
+                    required>
+                <p id="message4" style="color:red;margin: 0;; display: none;"> Digite seu nome completo</p>
+
+            </div>
+
+            <div id="inputs">
+
+                <img id="icons" src="imagens/email.png">
+                <input type="email" id="email" class="email" placeholder="Email" onfocus="validationemailFunction()"
+                    value="" required>
+                <p id="message3" style="color:red;margin: 0;; display: none;"> Digite um email válido</p>
+
+            </div>
+
+            <div id="inputs">
+
+                <img id="icons" src="imagens/padlock.png">
+                <input type="password" id="password_1" class="password" placeholder="Senha"
+                    title="Senha deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 caracteres"
+                    onfocus="passwordvalidationFunction()" value="" required>
+                <img id="img1" class="eye" src="imagens/visible.png" onclick="revealpassword_ONE_Function()">
+                <div id="message">
+                    <p id="letter" class="invalid">Letra Minúscula</p>
+                    <p id="capital" class="invalid">Letra Maiúscula</p>
+                    <p id="number" class="invalid">Usar Número</p>
+                    <p id="length" class="invalid">Mínimo de <b>8 characters</b></p>
+                </div>
+
+            </div>
+
+            <div id="confirm" class="inputs" style="display: none;">
+
+                <img id="icons" src="imagens/padlock.png">
+                <input type="password" id="password_2" class="password" placeholder="Confirme a Senha"
+                    onfocus="passwordconfirmFunction()" value="" required>
+                <img id="img2" class="eye" src="imagens/visible.png" onclick="revealpassword_TWO_Function()">
+                <p id="message2" style="color:red;margin: 0;"> Digite senhas iguais</p>
+            </div>
+
+            <div id="ButtonCadastrar">
+
+                <button id="register" class="custom-btn btn-style" onclick="registerFunction()">Cadastrar</button>
+
+            </div>
+
+
+        </div>
+
+        <div id="container-global-2">
+
+            <div id="moviment">
+                <img id="astronaut" src="imagens/astronaut.png">
+                <h1 id="title_lg">Já possui cadastro?</h1>
+                <h3 id="sub_title_lg">Clique aqui para fazer o login</h3>
+                <button id="tologin" class="custom-btn2 btn-to-alter" onclick="alterscreenFunction()"><span>Fazer
+                        Login</span></button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="box2" class="box2" style="display: none;">
+        <div id="container-global-3">
+
+            <div id="moviment">
+                <img id="astronaut" src="imagens/astronaut.png">
+                <h1 id="title_rg">Não possui cadastro?</h1>
+                <h3 id="sub_title_rg">Clique aqui para criar um!</h3>
+                <button id="toregister" class="custom-btn2 btn-to-alter" onclick="alterscreen2Function()"><span>Fazer Cadastro</span></button>
+            </div>
+
+        </div>
+
+        <div id="container-global-4">
+
+            <h1 id="title_login"> Bem Vindo(a)</h1>
+            <h3 id="sub_title_login"> Faça seu login aqui</h3>
+
+            <div id="inputs">
+
+                <img id="icons" src="imagens/email.png">
+                <input type="email" id="emailLogin" class="email" placeholder="Email" onfocus="validationemail2Function()" value="" required>
+                <p id="message5" style="color:red;margin: 0;; display: none;"> Digite um email válido</p>
+
+            </div>
+
+            <div id="inputs">
+
+                <img id="icons" src="imagens/padlock.png">
+                <input type="password" id="password_3" class="password" onfocus="leavepassword()" placeholder="Senha" value="" required>
+                <img id="img3" class="eye" src="imagens/visible.png" onclick="revealpassword_THREE_Function()">
+                <p id="message6" style="color:red;margin: 0;; display: none;"> Digite uma senha válida</p>
+
+            </div>
+
+            <div id="ButtonLogin">
+
+                <button id="login" class="custom-btn btn-style" onclick="loginFunction()">Entrar</button>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div class="contain">
+        <a id="logo" class="logo collapsed" href="https://www.instagram.com/mateussoierximenes/" target="_blank">
+            <span>MS</span><span class="collapse"><i>o</i><i>i</i><i>e</i><i>r</i></span>
+        </a>
+    </div>
+</body>
+
+</html>

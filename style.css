@@ -1,0 +1,633 @@
+/* Tirando barra de rolagem e definindo margin 0 */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* Definindo imagem como plano de fundo */
+#container-imagem {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    background: url('imagens/fundo.jpg');
+    background-size: cover;
+}
+
+/* Container da esquerda */
+#container-global-1 {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 50px 0px 0px 0px;
+    width: 27.5%;
+    height: 55%;
+    top: 25%;
+    left: 23.5%;
+}
+
+/* Titulo: Bem Vindo(a) referente a parte do cadastro*/
+#title_register {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 65px;
+    margin-bottom: 0px;
+}
+
+/* Sub-Titulo: Sua tela de Cadastro */
+#sub_title_register {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+/* Definindo tamanho e informações dos icones usados nos inputs */
+#icons,
+.icons {
+    margin: 0 auto;
+    margin-top: 4px;
+    margin-left: 3px;
+    height: 22.5px;
+    width: 22.5px;
+}
+
+.eye {
+    margin: 0 auto;
+    margin-top: 4px;
+    margin-left: 3%;
+    height: 22.5px;
+    width: 22.5px;
+    padding: 0 auto;
+}
+
+/* Definindo informações do inputs */
+#inputs,
+.inputs {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.24);
+    height: 30px;
+    width: 85.5%;
+}
+
+/* Definindo informações dos inputs */
+input {
+    position: relative;
+    top: 50%;
+    transform: translateY(-75%);
+    border-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+    height: 20px;
+    width: 85.5%;
+
+}
+
+/* Tirando um movimento do texto do input que aparece quando recebe o foco */
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 0;
+}
+
+/* Definindo cor do input */
+input::placeholder {
+    color: black;
+}
+
+/* Definindo tamanho do input das senhas */
+.password {
+    width: 70%;
+}
+
+/* Mensagem de validação da senha */
+#message {
+    display: none;
+    color: #000;
+    position: relative;
+}
+
+#message p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Colocando cor verde nos requerimentos que foram confirmados da senha */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    content: "✔";
+}
+
+/* Colocando cor vermelha nos requerimentos que não foram confirmados da senha */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    content: "✖";
+}
+
+
+/* Configurações do botão cadastrar */
+#ButtonCadastrar {
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.custom-btn {
+    margin: 20px;
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        inset -7px -7px 10px 0px rgba(0, 0, 0, .1), 7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, .5),
+        -4px -4px 6px rgba(116, 125, 136, .2);
+    outline: none;
+}
+
+.btn-style {
+    border: none;
+    background: rgb(251, 33, 117);
+    background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+    background: #f7d0f5;
+    color: rgba(251, 33, 117, .5);
+    overflow: hidden;
+}
+
+.btn-style:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn 3s ease-in-out infinite;
+}
+
+.btn-style:hover {
+    scale: 1.08;
+}
+
+@-webkit-keyframes shiny-btn {
+    0% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0;
+    }
+
+    80% {
+        -webkit-transform: scale(0) rotate(45deg);
+        opacity: 0.5;
+    }
+
+    81% {
+        -webkit-transform: scale(4) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(50) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+
+/* Container da Direita */
+#container-global-2 {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.479);
+    border-radius: 0px 0px 50px 0px;
+    width: 27.5%;
+    height: 55%;
+    top: 25%;
+    left: 51%;
+    text-align: center;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+#moviment {
+    margin-top: 20%;
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Configurações da imagen do astronauta */
+#astronaut {
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+}
+
+/* Titulo: Bem Vindo(a) referente a parte de alterar para login*/
+#title_lg {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* Sub-Titulo: Sua tela de Cadastro */
+#sub_title_lg {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* Botão para login */
+
+.custom-btn2 {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        inset -7px -7px 10px 0px rgba(0, 0, 0, .1), 7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, .5),
+        -4px -4px 6px rgba(116, 125, 136, .2);
+    outline: none;
+}
+
+.btn-to-alter {
+    background: #ffbf7f;
+    line-height: 42px;
+    color: darkorange;
+    padding: 0;
+    border: none;
+}
+
+.btn-to-alter span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-to-alter:before,
+.btn-to-alter:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-to-alter:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn-to-alter:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn-to-alter:hover {
+    color: rgba(251, 75, 2, 1);
+    background: transparent;
+}
+
+.btn-to-alter:hover:before {
+    height: 100%;
+}
+
+.btn-to-alter:hover:after {
+    width: 100%;
+}
+
+.btn-to-alter span:before,
+.btn-to-alter span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow:
+        -7px -7px 20px 0px rgba(255, 255, 255, .9),
+        -4px -4px 5px 0px rgba(255, 255, 255, .9),
+        7px 7px 20px 0px rgba(0, 0, 0, .2),
+        4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn-to-alter span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn-to-alter span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn-to-alter span:hover:before {
+    height: 100%;
+}
+
+.btn-to-alter span:hover:after {
+    width: 100%;
+}
+
+/* Container da esquerda LOGIN */
+#container-global-3 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.479);
+    border-radius: 50px 0px 0px 0px;
+    width: 27.5%;
+    height: 55%;
+    top: 25%;
+    left: 23.5%;
+    text-align: center;
+}
+
+/* Titulo: Não possui cadastro? */
+#title_rg {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/* Sub-Titulo: Clique aqui para criar um! */
+#sub_title_rg {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* Container da direita LOGIN */
+#container-global-4 {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 0px 0px 50px 0px;
+    width: 27.5%;
+    height: 55%;
+    top: 25%;
+    left: 51%;
+}
+
+/* Titulo: Bem Vindo(a) */
+#title_login {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 65px;
+    margin-bottom: 0px;
+}
+
+/* Sub-Titulo: Faça seu login aqui */
+#sub_title_login {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+
+/* Configurações do botão Login */
+#ButtonLogin {
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Logo MSoier */
+@keyframes float2 {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-10px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.contain {
+    font-family: 'Bungee Shade', cursive;
+    position: absolute;
+    height: 200px;
+    z-index: 15;
+    top: 90%;
+    right: 39%;
+    margin: 20px 0 0 30px;
+    text-align: center;
+    animation: float2 6s ease-in-out infinite;
+}
+
+
+.logo {
+    font-size: 30px;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #FFF;
+
+}
+
+.logo .collapse i {
+    font-style: inherit
+}
+
+.logo .collapse i:nth-of-type(1) {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.logo .collapse i:nth-of-type(2) {
+    -webkit-transition: all 0.2s 0.05s linear;
+    transition: all 0.2s 0.05s linear
+}
+
+.logo .collapse i:nth-of-type(3) {
+    -webkit-transition: all 0.2s 0.1s linear;
+    transition: all 0.2s 0.1s linear
+}
+
+.logo:hover .collapse {
+    max-width: 100px;
+    -webkit-transition: max-width 0.3s cubic-bezier(0, 0, 0, 1);
+    transition: max-width 0.3s cubic-bezier(0, 0, 0, 1)
+}
+
+.logo:hover .collapse i {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.logo:hover .collapse i:nth-of-type(1) {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.logo:hover .collapse i:nth-of-type(2) {
+    -webkit-transition: all 0.2s 0.05s linear;
+    transition: all 0.2s 0.05s linear
+}
+
+.logo:hover .collapse i:nth-of-type(3) {
+    -webkit-transition: all 0.2s 0.1s linear;
+    transition: all 0.2s 0.1s linear
+}
+
+.logo.collapsed .collapse {
+    max-width: 0;
+    -webkit-transition: max-width 0.3s 0.2s cubic-bezier(0, 0, 0, 1);
+    transition: max-width 0.3s 0.2s cubic-bezier(0, 0, 0, 1)
+}
+
+.logo.collapsed .collapse i {
+    opacity: 0;
+    -webkit-transform: translate(0, -5px);
+    transform: translate(0, -5px)
+}
+
+.logo:hover .collapse {
+    max-width: 100px;
+    -webkit-transition: max-width 0.3s cubic-bezier(0, 0, 0, 1);
+    transition: max-width 0.3s cubic-bezier(0, 0, 0, 1)
+}
+
+.logo:hover .collapse i {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.logo:hover .collapse i:nth-of-type(1) {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear
+}
+
+.logo:hover .collapse i:nth-of-type(2) {
+    -webkit-transition: all 0.2s 0.05s linear;
+    transition: all 0.2s 0.05s linear
+}
+
+.logo:hover .collapse i:nth-of-type(3) {
+    -webkit-transition: all 0.2s 0.1s linear;
+    transition: all 0.2s 0.1s linear
+}
+
+.logo:hover ul li,
+.logo:hover ul .directional-link.collapsed {
+    opacity: 1
+}
+
+.logo:hover .directional-link.collapsed {
+    -webkit-transform: translate3D(-1.38em, -50%, 0);
+    transform: translate3D(-1.38em, -50%, 0);
+    color: #fff;
+    opacity: 0.7
+}
+
+.logo:hover .directional-link.collapsed:hover {
+    opacity: 1
+}
+
+
+a {
+    color: #bbbbc4;
+    text-decoration: none;
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+a:hover {
+    color: hsl(180, 63%, 43%);
+}
+
+#logo:hover {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
